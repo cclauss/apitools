@@ -13,7 +13,7 @@ install:
   - pip install . --allow-external argparse
 script: tox -e $TOX_ENV
 after_success:
-  - if [[ "${TOX_ENV}" == "py27" ]]; then tox -e coveralls; fi
+  - if [[ "${TOX_ENV}" == "py35" ]]; then tox -e coveralls; fi
 
 # Tweak for adding python3.5; see
 # https://github.com/travis-ci/travis-ci/issues/4794
